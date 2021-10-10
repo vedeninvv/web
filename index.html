@@ -24,42 +24,45 @@
 </header>
 
 <main>
-    <section class="search-form">
-        <h2 class="search-form__title">Найти квартиру</h2>
-        <form>
-            <label for="city" class="search-form__point-title">Город:</label>
-            <select id="city" class="search-form__select">
-                <option>Санкт-Петербург</option>
-                <option>Омск</option>
-                <option>Москва</option>
-            </select>
-            <label for="university" class="search-form__point-title">Университет:</label>
-            <input id="university" type="text" placeholder="ИТМО" class="search-form__input search-form__input_wide">
-            <label for="numNeighbors" class="search-form__point-title">Число жильцов (макс.):</label>
-            <input id="numNeighbors" type="number" value="1" min="1" max="6" step="1"
-                   class="search-form__input">
-            <button class="search-form__search-button">Поиск</button>
-        </form>
-    </section>
+    <div class="search-forms-box">
+        <section class="search-form">
+            <h2 class="search-form__title">Найти квартиру</h2>
+            <form>
+                <label for="city" class="search-form__point-title">Город:</label>
+                <select id="city" class="search-form__select">
+                    <option>Санкт-Петербург</option>
+                    <option>Омск</option>
+                    <option>Москва</option>
+                </select>
+                <label for="university" class="search-form__point-title">Университет:</label>
+                <input id="university" type="text" placeholder="ИТМО"
+                       class="search-form__input search-form__input_wide">
+                <label for="numNeighbors" class="search-form__point-title">Число жильцов (макс.):</label>
+                <input id="numNeighbors" type="number" value="1" min="1" max="6" step="1"
+                       class="search-form__input">
+                <button class="search-form__search-button">Поиск</button>
+            </form>
+        </section>
 
-    <section class="search-form">
-        <h2 class="search-form__title">Найти соседа</h2>
-        <form>
-            <label for="neighborCity" class="search-form__point-title">Город:</label>
-            <select id="neighborCity" class="search-form__select">
-                <option>Санкт-Петербург</option>
-                <option>Омск</option>
-                <option>Москва</option>
-            </select>
-            <label for="neighborUniversity" class="search-form__point-title">Университет:</label>
-            <input id="neighborUniversity" type="text" placeholder="ИТМО"
-                   class="search-form__input search-form__input_wide">
-            <label for="neighborFaculty" class="search-form__point-title">Факультет:</label>
-            <input id="neighborFaculty" type="text" placeholder="ФИТИП"
-                   class="search-form__input search-form__input_wide">
-            <button class="search-form__search-button">Поиск</button>
-        </form>
-    </section>
+        <section class="search-form">
+            <h2 class="search-form__title">Найти соседа</h2>
+            <form>
+                <label for="neighborCity" class="search-form__point-title">Город:</label>
+                <select id="neighborCity" class="search-form__select">
+                    <option>Санкт-Петербург</option>
+                    <option>Омск</option>
+                    <option>Москва</option>
+                </select>
+                <label for="neighborUniversity" class="search-form__point-title">Университет:</label>
+                <input id="neighborUniversity" type="text" placeholder="ИТМО"
+                       class="search-form__input search-form__input_wide">
+                <label for="neighborFaculty" class="search-form__point-title">Факультет:</label>
+                <input id="neighborFaculty" type="text" placeholder="ФИТИП"
+                       class="search-form__input search-form__input_wide">
+                <button class="search-form__search-button">Поиск</button>
+            </form>
+        </section>
+    </div>
 
     <section class="list">
         <h2>Почему съемное жилье лучше общаги?</h2>
