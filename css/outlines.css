@@ -1,0 +1,48 @@
+.menu {
+    background: #FDD540;
+    color: #FFF;
+    height: 54px;
+    padding-left: 18px;
+    padding-right: 18px;
+    border-radius: 10px;
+    width: 90%;
+}
+
+.menu ul, .menu__item {
+    margin: 0 auto;
+    padding: 0;
+    list-style: none
+}
+
+.menu ul {
+    width: 100%;
+}
+
+.menu__item {
+    float: left;
+    display: inline;
+    position: relative;
+}
+
+.menu__item_right {
+    float: right;
+    font-weight: bold;
+}
+
+.menu__item a {
+    display: block;
+    line-height: 54px;
+    padding: 0 14px;
+    text-decoration: none;
+    color: #434142;
+    font-size: 18px;
+}
+
+.menu__item a:hover {
+    color: #FFFFFF;
+    background: #434142;
+}
+
+.logo {
+    width: 10%;
+}
