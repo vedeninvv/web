@@ -1,4 +1,9 @@
 body{
+    padding: 0;
+    margin: 0;
+}
+
+main, header{
     width: 90%;
     padding-right: 5%;
     padding-left: 5%;
@@ -130,40 +135,43 @@ body{
 
 }
 
-
 .list {
     counter-reset: li;
     list-style: none;
-    font: 18px "Trebuchet MS", "Lucida Sans";
-    padding: 0;
-    text-shadow: 0 1px 0 rgba(255,255,255,.5);
+    font-size: 18px;
 }
 .list li {
     position: relative;
     display: block;
-    padding: .4em .4em .4em 2em;
-    margin: .5em 0;
+    padding: 8px 8px 8px 40px;
+    margin: 8px 0;
     background: #CBCFD1;
     color: #444;
     text-decoration: none;
-    border-radius: .3em;
-    transition: .3s ease-out;
+    border-radius: 8px;
+    width: 20%;
 }
 
-.list li:before {
+.list li::before {
     content: counter(li);
     counter-increment: li;
     position: absolute;
-    left: -1.3em;
+    left: -24px;
     top: 50%;
-    margin-top: -1.3em;
+    margin-top: -24px;
     background: #FFD639;
-    height: 2em;
-    width: 2em;
-    line-height: 2em;
-    border: .3em solid white;
+    height: 35px;
+    width: 35px;
+    line-height: 40px;
+    border: 7px solid white;
     text-align: center;
     font-weight: bold;
-    border-radius: 2em;
-    transition: all .3s ease-out;
+    border-radius: 40px;
+}
+
+.footer {
+    background-color: #313B2F;
+    padding: 1%;
+    color: #FFFFFF;
+    text-align: center;
 }
