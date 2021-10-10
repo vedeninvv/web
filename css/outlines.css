@@ -90,6 +90,10 @@ main, header{
     border-radius: 5px;
 }
 
+.search-form__input_wide {
+    width: 80%;
+}
+
 .search-form__input::placeholder {
     color: #434142;
     font-size: 16px;
