@@ -1,6 +1,14 @@
+body{
+    width: 90%;
+    padding-right: 5%;
+    padding-left: 5%;
+    font-family: arial, sans-serif;
+    margin: 0;
+}
+
 .menu {
-    background: #FDD540;
-    color: #FFF;
+    background: #FFD639;
+    color: #FFFFFF;
     height: 54px;
     padding-left: 18px;
     padding-right: 18px;
@@ -43,6 +51,119 @@
     background: #434142;
 }
 
-.logo {
+.header__logo {
     width: 10%;
+}
+
+.search-form {
+    width: 35%;
+    background: #333333;
+    padding: 0.2% 2% 2% 2%;
+    border-radius: 3%;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.search-form__select {
+    display: block;
+    margin-bottom: 20px;
+    background-color: #FFD639;
+    color: #000000;
+    font-size: 16px;
+    padding: 10px 30px 10px 10px;
+    border: 40px;
+    border-radius: 5px;
+}
+
+.search-form__input {
+    display: block;
+    margin-bottom: 20px;
+    background-color: #FFD639;
+    color: #000000;
+    font-size: 16px;
+    padding: 10px 30px 10px 10px;
+    border: 40px;
+    border-radius: 5px;
+}
+
+.search-form__input::placeholder {
+    color: #434142;
+    font-size: 16px;
+}
+
+.search-form__input::-webkit-outer-spin-button,
+.search-form__input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.search-form__search-button {
+    background-color: #FFD639;
+    color: #000000;
+    padding: 10px 40px;
+    text-align: center;
+    display: block;
+    font-size: 16px;
+    border: none;
+    position: relative;
+    left: 75%;
+}
+
+.search-form__search-button:hover{
+    background-color: #b2a200;
+}
+
+.search-form__point-title {
+    display: block;
+    font-size: 18px;
+    color: #FFFFFF;
+    margin-bottom: 10px;
+}
+
+.search-form__title{
+    font-size: 28px;
+    color: #FFFFFF;
+    text-align: center;
+    font-weight: normal;
+    padding-bottom: 5px;
+    letter-spacing: 1px;
+    word-spacing: 1px;
+    line-height: 0.5;
+
+}
+
+
+.list {
+    counter-reset: li;
+    list-style: none;
+    font: 18px "Trebuchet MS", "Lucida Sans";
+    padding: 0;
+    text-shadow: 0 1px 0 rgba(255,255,255,.5);
+}
+.list li {
+    position: relative;
+    display: block;
+    padding: .4em .4em .4em 2em;
+    margin: .5em 0;
+    background: #CBCFD1;
+    color: #444;
+    text-decoration: none;
+    border-radius: .3em;
+    transition: .3s ease-out;
+}
+
+.list li:before {
+    content: counter(li);
+    counter-increment: li;
+    position: absolute;
+    left: -1.3em;
+    top: 50%;
+    margin-top: -1.3em;
+    background: #FFD639;
+    height: 2em;
+    width: 2em;
+    line-height: 2em;
+    border: .3em solid white;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 2em;
+    transition: all .3s ease-out;
 }
