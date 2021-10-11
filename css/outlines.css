@@ -137,6 +137,7 @@ main, header {
     word-spacing: 1px;
     line-height: 0.5;
     text-transform: uppercase;
+    text-decoration: underline;
 }
 
 .list {
