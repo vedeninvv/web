@@ -1,9 +1,9 @@
-body{
+body {
     padding: 0;
     margin: 0;
 }
 
-main, header{
+main, header {
     width: 90%;
     padding-right: 5%;
     padding-left: 5%;
@@ -12,7 +12,7 @@ main, header{
 }
 
 .menu {
-    background: #FFD639;
+    background-color: #FFD639;
     color: #FFFFFF;
     height: 54px;
     padding-left: 18px;
@@ -53,7 +53,7 @@ main, header{
 
 .menu__item a:hover {
     color: #FFFFFF;
-    background: #434142;
+    background-color: #434142;
 }
 
 .header__logo {
@@ -62,9 +62,9 @@ main, header{
 
 .search-form {
     width: 35%;
-    background: #333333;
+    background-color: #333333;
     padding: 0.2% 2% 2% 2%;
-    border-radius: 3%;
+    border-radius: 10px;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -116,7 +116,7 @@ main, header{
     left: 75%;
 }
 
-.search-form__search-button:hover{
+.search-form__search-button:hover {
     background-color: #b2a200;
 }
 
@@ -127,7 +127,7 @@ main, header{
     margin-bottom: 10px;
 }
 
-.search-form__title{
+.search-form__title {
     font-size: 24px;
     color: #FFFFFF;
     text-align: center;
@@ -144,12 +144,13 @@ main, header{
     list-style: none;
     font-size: 18px;
 }
+
 .list li {
     position: relative;
     display: block;
     padding: 8px 8px 8px 40px;
     margin: 8px 0;
-    background: #CBCFD1;
+    background-color: #CBCFD1;
     color: #444;
     text-decoration: none;
     border-radius: 8px;
@@ -163,7 +164,7 @@ main, header{
     left: -24px;
     top: 50%;
     margin-top: -24px;
-    background: #FFD639;
+    background-color: #FFD639;
     height: 35px;
     width: 35px;
     line-height: 40px;
@@ -173,8 +174,31 @@ main, header{
     border-radius: 40px;
 }
 
+.counter {
+    background-color: #333333;
+    color: #FFFFFF;
+    padding: 0.5% 3% 3% 3%;
+    border-radius: 10px;
+}
+
+.counter__num {
+    color: #FFD639;
+    font-size: 54px;
+    font-weight: bold;
+}
+
+.counter__reg-button {
+    background-color: #FFD639;
+    color: #000000;
+    padding: 10px 40px;
+    text-align: center;
+    display: block;
+    font-size: 16px;
+    border: none;
+}
+
 .footer {
-    background-color: #313B2F;
+    background-color: #333333;
     padding: 1%;
     color: #FFFFFF;
     text-align: center;
