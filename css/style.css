@@ -234,4 +234,5 @@ header {
     text-align: center;
     position: absolute;
     width: 100%;
+    bottom: -100%;
 }
