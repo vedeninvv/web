@@ -1,3 +1,9 @@
+@media screen and (max-width: 1200px) {
+    .header__logo{
+        display: none;
+    }
+}
+
 body {
     padding: 0;
     margin: 0;
@@ -8,7 +14,6 @@ main, header {
     padding-right: 5%;
     padding-left: 5%;
     font-family: arial, sans-serif;
-    margin: 0;
 }
 
 main {
@@ -24,42 +29,36 @@ header {
 .menu {
     background-color: #FFD639;
     color: #FFFFFF;
-    height: 54px;
-    padding-left: 18px;
-    padding-right: 18px;
+    padding: 0 2%;
     border-radius: 10px;
     width: 88%;
     margin-left: 2%;
+    height: 20%;
+}
+
+.menu ul {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
 }
 
 .menu ul, .menu__item {
-    margin: 0 auto;
+    margin: 0;
     padding: 0;
     list-style: none
 }
 
-.menu ul {
-    width: 100%;
-}
-
-.menu__item {
-    float: left;
-    display: inline;
-    position: relative;
-}
-
-.menu__item_right {
-    float: right;
+.menu__item_bold {
     font-weight: bold;
 }
 
 .menu__item a {
     display: block;
-    line-height: 54px;
+    line-height: 3em;
     padding: 0 14px;
     text-decoration: none;
     color: #434142;
-    font-size: 18px;
+    font-size: 1.20em;
 }
 
 .menu__item a:hover {
@@ -71,8 +70,8 @@ header {
     width: 10%;
 }
 
-.search-forms-box{
-    margin: 2% 0;
+.search-forms-box {
+    margin: 2% 0 10% 0;
     display: flex;
     justify-content: space-around;
 }
@@ -87,23 +86,21 @@ header {
 
 .search-form__select {
     display: block;
-    margin-bottom: 20px;
+    margin-bottom: 5%;
     background-color: #FFD639;
     color: #000000;
-    font-size: 16px;
-    padding: 10px 30px 10px 10px;
-    border: 40px;
+    font-size: 1em;
+    padding: 2% 6% 2% 2%;
     border-radius: 5px;
 }
 
 .search-form__input {
     display: block;
-    margin-bottom: 20px;
+    margin-bottom: 5%;
     background-color: #FFD639;
     color: #000000;
-    font-size: 16px;
-    padding: 10px 30px 10px 10px;
-    border: 40px;
+    font-size: 1em;
+    padding: 2% 6% 2% 2%;
     border-radius: 5px;
 }
 
@@ -113,7 +110,7 @@ header {
 
 .search-form__input::placeholder {
     color: #434142;
-    font-size: 16px;
+    font-size: 1em;
 }
 
 .search-form__input::-webkit-outer-spin-button,
@@ -124,13 +121,12 @@ header {
 .search-form__search-button {
     background-color: #FFD639;
     color: #000000;
-    padding: 10px 40px;
+    padding: 2% 8%;
     text-align: center;
     display: block;
-    font-size: 16px;
+    font-size: 1em;
     border: none;
-    position: relative;
-    left: 75%;
+    float: right;
 }
 
 .search-form__search-button:hover {
@@ -139,20 +135,19 @@ header {
 
 .search-form__point-title {
     display: block;
-    font-size: 18px;
+    font-size: 1.2em;
     color: #FFFFFF;
-    margin-bottom: 10px;
+    margin-bottom: 2%;
 }
 
 .search-form__title {
-    font-size: 24px;
+    font-size: 1.6em;
     color: #FFFFFF;
     text-align: center;
     font-weight: normal;
-    padding-bottom: 5px;
+    padding-bottom: 1%;
     letter-spacing: 1px;
     word-spacing: 1px;
-    line-height: 0.5;
     text-transform: uppercase;
     text-decoration: underline;
 }
@@ -160,7 +155,8 @@ header {
 .list {
     counter-reset: li;
     list-style: none;
-    font-size: 18px;
+    font-size: 1.2em;
+    margin-bottom: 5%;
 }
 
 .list ol {
@@ -203,22 +199,32 @@ header {
     color: #FFFFFF;
     padding: 0.5% 3% 3% 3%;
     border-radius: 10px;
+    margin-bottom: 10%;
 }
 
-.counter__num {
+.counter-box {
+    display: flex;
+    justify-content: space-around;
+}
+
+.counter-box__num {
     color: #FFD639;
-    font-size: 54px;
+    font-size: 4em;
     font-weight: bold;
+    text-align: center;
 }
 
 .counter__reg-button {
     background-color: #FFD639;
     color: #000000;
-    padding: 10px 40px;
+    padding: 1% 10%;
     text-align: center;
-    display: block;
-    font-size: 16px;
+    font-size: 1em;
     border: none;
+}
+
+.counter__reg-button:hover {
+    background-color: #b2a200;
 }
 
 .footer {
@@ -226,4 +232,6 @@ header {
     padding: 1%;
     color: #FFFFFF;
     text-align: center;
+    position: absolute;
+    width: 100%;
 }
