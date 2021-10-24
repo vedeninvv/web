@@ -5,163 +5,86 @@
     <meta name="keywords" content="Аренда, сдача, квартира, комната, студент, сосед, съем">
     <meta name="description"
           content="Сервис для студентов по поиску соседей из одного университета. Сдача квартиры группе студентов.">
-    <link href="outlines.css" rel="stylesheet">
-    <title>Student House</title>
+    <link href="css/outlines.css" rel="stylesheet">
+    <title>Student Hata</title>
 </head>
 <body>
-<header>
-    <img src="#" alt="Logo">
-    <h1>Student House</h1>
-    <nav>
+<header class="header">
+    <img src="media/Logo.png" class="header__logo" alt="Logo">
+    <nav class="menu">
         <ul>
-            <li><a href="#">Квартиры</a></li>
-            <li><a href="#">Соседи</a></li>
-            <li><a href="#">Сдать квартиру</a></li>
-            <li><a href="#">Анкета жильца</a></li>
-            <li><strong><a href="#">Войти</a>/<a href="#">Зарегистрироваться</a></strong></li>
+            <li class="menu__item"><a href="#">Квартиры</a></li>
+            <li class="menu__item"><a href="#">Соседи</a></li>
+            <li class="menu__item"><a href="#">Сдать квартиру</a></li>
+            <li class="menu__item"><a href="#">Анкета жильца</a></li>
+            <li class="menu__item menu__item_right"><a href="#">Войти</a></li>
+            <li class="menu__item menu__item_right"><a href="#">Зарегистрироваться</a></li>
         </ul>
     </nav>
 </header>
 
 <main>
-    <section>
-        <h2>Найти <i>квартиру</i></h2>
+    <section class="search-form">
+        <h2 class="search-form__title">Найти квартиру</h2>
         <form>
-            <label for="city">Город:</label>
-            <select id="city">
+            <label for="city" class="search-form__point-title">Город:</label>
+            <select id="city" class="search-form__select">
                 <option>Санкт-Петербург</option>
                 <option>Омск</option>
                 <option>Москва</option>
             </select>
-            <label for="university">Университет:</label>
-            <input id="university" type="text" size="40">
-            <label for="numNeighbors">Число жильцов (макс.):</label>
-            <input id="numNeighbors" type="number" value="1" min="1" max="6" step="1">
-            <button>Поиск</button>
+            <label for="university" class="search-form__point-title">Университет:</label>
+            <input id="university" type="text" placeholder="ИТМО" class="search-form__input search-form__input_wide">
+            <label for="numNeighbors" class="search-form__point-title">Число жильцов (макс.):</label>
+            <input id="numNeighbors" type="number" value="1" min="1" max="6" step="1"
+                   class="search-form__input">
+            <button class="search-form__search-button">Поиск</button>
         </form>
     </section>
 
-    <section>
-        <h2>Найти <i>соседа</i></h2>
+    <section class="search-form">
+        <h2 class="search-form__title">Найти соседа</h2>
         <form>
-            <label for="neighborCity">Город:</label>
-            <select id="neighborCity">
+            <label for="neighborCity" class="search-form__point-title">Город:</label>
+            <select id="neighborCity" class="search-form__select">
                 <option>Санкт-Петербург</option>
                 <option>Омск</option>
                 <option>Москва</option>
             </select>
-            <label for="neighborUniversity">Университет:</label>
-            <input id="neighborUniversity" type="text" size="40">
-            <label for="neighborFaculty">Факультет:</label>
-            <input id="neighborFaculty" type="text" size="40">
-            <button>Поиск</button>
+            <label for="neighborUniversity" class="search-form__point-title">Университет:</label>
+            <input id="neighborUniversity" type="text" placeholder="ИТМО"
+                   class="search-form__input search-form__input_wide">
+            <label for="neighborFaculty" class="search-form__point-title">Факультет:</label>
+            <input id="neighborFaculty" type="text" placeholder="ФИТИП"
+                   class="search-form__input search-form__input_wide">
+            <button class="search-form__search-button">Поиск</button>
         </form>
     </section>
 
-    <section>
-        <h2>Почему лучше снимать
-            <ins>с соседом</ins>
-            ?
-        </h2>
-        <ul>
-            <li>Дешевле</li>
-            <li>Веселее</li>
-            <li>Разделение труда по дому</li>
-            <li>Взаимопомощь</li>
-            <li>Совместная учеба</li>
-        </ul>
+    <section class="list">
+        <h2>Почему съемное жилье лучше общаги?</h2>
+        <ol>
+            <li>Вы выбираете место расположения</li>
+            <li>Вы сами устанавливаете правила</li>
+            <li>Вы определяете кто и сколько людей живет</li>
+            <li>В вашей квартире будет намного тише</li>
+            <li>У вас будет собственный санузел</li>
+        </ol>
     </section>
 
-    <section>
-        <h2>Остальные пункты лабораторной</h2>
-        <article>
-            <h3>Псевдографика</h3>
-            <pre>
-                                             ,
-                            ,$
-                            dP,$
-                            $F<$b
-  ,;!!!!-                   $F<$$b         <  ,   ;
- ;!!!!'   ?                 `?."$$c      `;,`!<!!;`>   >
-!!!!!!    `?                   - "?h,   .  `!,`!!;\'  <>
-!!!!>>     `h                `-`- . "r .,J,-'!>`>` !>,! !
-`!!! \      3           ,ccc,,,.````,c$???$c`!!,`> ! !,'            ,r
- !!>        ?,          `$$$$$$$c$$$c,   ),$b`'` \ `:'        ,,cc$$"
-  `!        `h         -.`$PF"$????$$$b,"'?$$$J$c `'  ,,ccc$$$$$$P"
-             F       -```,nP c$$$,<,3$$$$$$$$$$$$$$$$Ccd$$c`??""
-            ;F        ,nMM" $$$$$$ $$$$$$$$$$$$$$$$$$"  ,`$
-            J'      ,MMMM  ,$$$$$'J$$$$$$$$$$$$$$$$$$ ,,,cc,,
-            J      dMMMMf,d$$$$$',$$$$$$$$$$$$$$$$$$$ ?$????$$bc
-           ,$     JMMMMM `$$$$P",$$$$$$$$$$$$$$$$$$$$b ?F<$hd$$P"
-           JP    ,MMMMMM.."L,,=$$$$$$$$$$$$$F",;;,`"??h, $$$P"
-           $F    `MMMMMMb`,`"?h,. ,$$$$$$$$$FF""`""""==?-`?$"
-          ,$      4MMMMMMb`Tnx`?$$$$$$$$$$$$$?????"""""' .,,cc,            M
-          J$F    ,`4MMMMMMMh;"?'$$$$$$PF"',cccd$$$$$$$$$$$$$$$$$,         JM
-          ?",,cP,$h,`4MMMMMMMMM $$$$P",$$$$$$$$$$$$$$$$$$$$$$$$$$,     , ,MM
-        ,cd$$$$ d$$$$c,`"4MMMMM,`$$$ J$$$$$$$$P".::::,$$$$$$$$$$$$ ,,r",nMMM
-      z$$$$$$$F $$$$$$$$$cc,. "" `$$ $$$$$$$$":::`.:,$$$$$$$P".`$$ ,xnMMMMP
-     d$$$$$$$$F $$$$$$$$$$$$$$$c   ">`$$$$$$$, ```,z$$$$$$$"::',$",MMMMMP"
-     $?$$$$$$$F $$$$$$$$$$$$$$$$L :::.""??$$$$$$$$$$$$$$$$$c,,cP" TTTT"
-    j"d$$$$$$$L $$$$$$$$$$$$$$$$$$,``,mn,_ .`"""???????????""" ,c
-     d$$$$$$$$$ ?$$$$$$$$$$$$$$$$$$b,`"4MM,:::::..::::: ::: 3$c`"
-   ,$$$$$$$$$$$c $$$$$$$$$$$$$$$$$$$$$c,.'  ::::::::::` ::::."?h,
-,c$$$$$$$$$$ $$$c`$$$$$$$$$$$$$$$$$$$$$$$$$hcc,,,,.   ```..,,ccd$"
-',c"?$$$$$$F,$$$$bd$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$'
-<$$h`$$$$$",$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$P'
-`$$$c".?$F,$$$$$$$$$$$$$$$$??$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$P"
- `$$$c,." d$$$$$$$$$$$$$$$$$,?$$$$$$$$$$$$$$$$$$$$$$$$$$$$P"
-  `$$$$$c``$$$$$$$$$$$$$c"$$$c"$$$$$$$$$$$$$$$$$$$$$$$$P"
-   `?$$$$h,`$$$$$$$$$$$$$h,?$$h,"$$$$$$$$$$$$$$$$$$PF".
-     "$$$$$h ?$$$$$$$$F$$$$$c`??$c,"?$$$$$$$$$$P"',c$"
-     -,"?$$$$,"$$$$$$$b`$$$$$$hc,`""==    .,,,cd$$P",
-      "$c,"??$h "$$$$$$c`"==- ,z$$$$$$$$$$c-`3$P",c$"
-       `$$$c  ""- ?$$$$$ J$$$$$$$$$$$$$$$$$$ ",c$$P'
-         ?$$       "$$$$ ???$$$$$$$$$$$$PF" z$$$P"
-          `$        `$$"       ,,           $$$"
-           $>        ?$        `$           4$'
-          ,F         ?$         "P  ,       4F
-        ???'         `$           4Mn`-     J(
-                      $c                    $b,
-                  ,- ???                    `,dn(+
-                 ',dMM-                      `"??=
-                  "'
-
-            </pre>
-        </article>
-
-        <article>
-            <h3>Код</h3>
-            <pre>
-                <code>
-                    String str1 = "Abc";
-                    String str2 = "Abc";
-                    if (str1 == str2){
-                        System.out.println("Equal");
-                    } else {
-                        System.out.println("Not equal");
-                    }
-                </code>
-            </pre>
-        </article>
-
-        <article>
-            <h3>Цитата</h3>
-            <blockquote>
-                <p>Всегда кажется, что нас любят за то, что мы хороши. А не догадываемся, что любят нас оттого, что
-                    хороши те, кто нас любит.</p>
-                <cite>Лев Николаевич Толстой</cite>
-            </blockquote>
-        </article>
-
-        <article>
-            <h3>Формула успеха:</h3>
-            E=mc<sup>2</sup>
-        </article>
+    <section class="counter">
+        <h2>Всего анкет</h2>
+        <div class="counter__num">0</div>
+        <h2>Всего квартир</h2>
+        <div class="counter__num">0</div>
+        <div>
+            <button class="counter__reg-button">Зарегистрироваться</button>
+        </div>
     </section>
 </main>
 
-<footer>
-    ©2021 Веденин Вадим, М33031
+<footer class="footer">
+    ©2021 Веденин Вадим, М33031. Created specifically for the ITMO course web programming
 </footer>
 
 </body>
