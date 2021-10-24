@@ -11,6 +11,16 @@ main, header {
     margin: 0;
 }
 
+main {
+    width: 84%;
+    padding-right: 8%;
+    padding-left: 8%;
+}
+
+header {
+    display: flex;
+}
+
 .menu {
     background-color: #FFD639;
     color: #FFFFFF;
@@ -18,7 +28,8 @@ main, header {
     padding-left: 18px;
     padding-right: 18px;
     border-radius: 10px;
-    width: 90%;
+    width: 88%;
+    margin-left: 2%;
 }
 
 .menu ul, .menu__item {
@@ -58,6 +69,12 @@ main, header {
 
 .header__logo {
     width: 10%;
+}
+
+.search-forms-box{
+    margin: 2% 0;
+    display: flex;
+    justify-content: space-around;
 }
 
 .search-form {
@@ -146,11 +163,17 @@ main, header {
     font-size: 18px;
 }
 
+.list ol {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
 .list li {
     position: relative;
     display: block;
     padding: 8px 8px 8px 40px;
-    margin: 8px 0;
+    margin: 8px 30px;
     background-color: #CBCFD1;
     color: #444;
     text-decoration: none;
