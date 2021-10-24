@@ -1,9 +1,9 @@
 @media screen and (max-width: 1200px) {
-    .header__logo{
+    .header__logo {
         display: none;
     }
 
-    .footer{
+    .footer {
         display: none;
     }
 }
@@ -229,6 +229,44 @@ header {
 
 .counter__reg-button:hover {
     background-color: #b2a200;
+}
+
+.statistic-block {
+    font-size: 1.2em;
+}
+
+.table {
+    display: grid;
+    grid-template-rows: minmax(50px, 1.2fr) minmax(50px, 1fr) minmax(50px, 1fr) minmax(50px, 1fr);
+    font-size: 0.95em;
+}
+
+.table__row {
+    display: grid;
+    grid-template-columns: minmax(50px, 1fr) minmax(50px, 1fr) minmax(100px, 2fr) minmax(50px, 1fr) minmax(50px, 1fr);
+    background-color: #FFD639;
+}
+
+.table__cell_bold {
+    font-weight: bold;
+}
+
+.table__row:nth-child(odd) {
+    background-color: #ececec;
+}
+
+.table__row:nth-child(1) {
+    background-color: #333333;
+    color: #FFFFFF;
+}
+
+.table__cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 8px;
+    border: solid 1px #000000;
 }
 
 .footer {
