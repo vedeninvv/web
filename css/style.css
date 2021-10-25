@@ -1,8 +1,4 @@
-@media screen and (max-width: 1000px) {
-    .header__logo {
-        display: none;
-    }
-
+@media screen and (max-width: 700px) {
     .footer {
         display: none;
     }
@@ -28,9 +24,13 @@
     .list li {
         width: 100%;
     }
+
+    .table {
+        width: 600px;
+    }
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 700px) {
     .search-form {
         width: 35%;
     }
@@ -42,6 +42,12 @@
 
     .list li {
         width: 20%;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .header__logo {
+        display: none;
     }
 }
 
@@ -269,6 +275,7 @@ header {
 .statistic-block {
     font-size: 1.2em;
     margin-bottom: 4%;
+    overflow: auto;
 }
 
 .table {
@@ -301,9 +308,8 @@ header {
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 8px;
+    padding: 2%;
     border: solid 1px #000000;
-    overflow: auto;
 }
 
 .footer {
