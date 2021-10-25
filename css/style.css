@@ -1,10 +1,47 @@
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1000px) {
     .header__logo {
         display: none;
     }
 
     .footer {
         display: none;
+    }
+
+    .search-forms-box {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .search-form {
+        width: 100%;
+    }
+
+    .menu {
+        width: 100%;
+    }
+
+    .counter-box {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .list li {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .search-form {
+        width: 35%;
+    }
+
+    .menu {
+        width: 88%;
+        margin-left: 2%;
+    }
+
+    .list li {
+        width: 20%;
     }
 }
 
@@ -35,8 +72,6 @@ header {
     color: #FFFFFF;
     padding: 0 2%;
     border-radius: 10px;
-    width: 88%;
-    margin-left: 2%;
     height: 20%;
 }
 
@@ -75,15 +110,15 @@ header {
 }
 
 .search-forms-box {
-    margin: 2% 0 10% 0;
+    margin: 2% 0;
     display: flex;
     justify-content: space-around;
 }
 
 .search-form {
-    width: 35%;
     background-color: #333333;
     padding: 0.2% 2% 2% 2%;
+    margin-bottom: 5%;
     border-radius: 10px;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -172,13 +207,13 @@ header {
 .list li {
     position: relative;
     display: block;
-    padding: 8px 8px 8px 40px;
+    padding: 40px;
     margin: 8px 30px;
     background-color: #CBCFD1;
     color: #444;
     text-decoration: none;
     border-radius: 8px;
-    width: 20%;
+    text-align: center;
 }
 
 .list li::before {
@@ -233,6 +268,7 @@ header {
 
 .statistic-block {
     font-size: 1.2em;
+    margin-bottom: 4%;
 }
 
 .table {
@@ -267,11 +303,12 @@ header {
     text-align: center;
     padding: 8px;
     border: solid 1px #000000;
+    overflow: auto;
 }
 
 .footer {
     background-color: #333333;
-    padding: 1%;
+    padding: 1% 0;
     color: #FFFFFF;
     text-align: center;
     width: 100%;
