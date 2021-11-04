@@ -119,6 +119,10 @@ header {
     background-color: #434142;
 }
 
+.menu__item_active {
+    font-weight: bold;
+}
+
 .header__logo {
     width: 10%;
 }
@@ -318,6 +322,19 @@ header {
     text-align: center;
     padding: 2%;
     border: solid 1px #000000;
+}
+
+.questionnaire-form {
+    padding: 2%;
+    margin-bottom: 10%;
+}
+
+.questionnaire-form button{
+    float: right;
+}
+
+*, ::after, ::before {
+    box-sizing: initial;
 }
 
 .footer {
