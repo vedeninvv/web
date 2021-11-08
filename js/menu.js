@@ -4,6 +4,7 @@
     let menu = document.getElementsByClassName("menu")[0]
     let menuOptions = menu.getElementsByTagName("a")
     if (page === "https://vedeninvv.github.io/web/"){
+        alert(page)
         menuOptions[0].classList.add("menu__item_active");
         return;
     }
