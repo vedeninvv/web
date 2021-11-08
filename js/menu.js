@@ -3,8 +3,7 @@
 
     let menu = document.getElementsByClassName("menu")[0]
     let menuOptions = menu.getElementsByTagName("a")
-    alert(page)
-    if (page === "https://vedeninvv.github.io/web/"){
+    if (page === ""){
         menuOptions[0].classList.add("menu__item_active");
         return;
     }
