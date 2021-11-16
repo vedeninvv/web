@@ -329,12 +329,49 @@ header {
     margin-bottom: 10%;
 }
 
-.questionnaire-form button{
+.questionnaire-form button {
     float: right;
 }
 
 *, ::after, ::before {
     box-sizing: initial;
+}
+
+.input-block {
+    margin-bottom: 1%;
+}
+
+.form-label {
+    font-size: 1.1em;
+    display: block;
+    padding-bottom: 0.5%;
+}
+
+.form-control {
+    width: 100%;
+    font-size: 1.05em;
+    padding: 0.6% 0.5%;
+}
+
+.form-control-textarea {
+    font-size: 1.4em;
+    width: 100%;
+    padding: 0.7%;
+}
+
+.btn-save {
+    background-color: #FFD639;
+    color: #000000;
+    padding: 1% 4%;
+    text-align: center;
+    display: block;
+    font-size: 1em;
+    border: none;
+    float: right;
+}
+
+.btn-save:hover {
+    background-color: #b2a200;
 }
 
 .footer {
