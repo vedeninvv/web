@@ -51,9 +51,15 @@
     }
 }
 
+html, body {
+    height: 100%;
+}
+
 body {
     padding: 0;
     margin: 0;
+    display: flex;
+    flex-direction: column;
 }
 
 main, header {
@@ -67,10 +73,13 @@ main {
     width: 84%;
     padding-right: 8%;
     padding-left: 8%;
+    flex: 1 0 auto;
 }
 
 header {
     display: flex;
+    flex-direction: row;
+    align-items: flex-start;
 }
 
 .menu {
@@ -78,7 +87,6 @@ header {
     color: #FFFFFF;
     padding: 0 2%;
     border-radius: 10px;
-    height: 20%;
 }
 
 .menu ul {
@@ -109,6 +117,10 @@ header {
 .menu__item a:hover {
     color: #FFFFFF;
     background-color: #434142;
+}
+
+.menu__item_active {
+    font-weight: bold;
 }
 
 .header__logo {
@@ -312,10 +324,61 @@ header {
     border: solid 1px #000000;
 }
 
+.questionnaire-form {
+    padding: 2%;
+    margin-bottom: 10%;
+}
+
+.questionnaire-form button {
+    float: right;
+}
+
+*, ::after, ::before {
+    box-sizing: initial;
+}
+
+.input-block {
+    margin-bottom: 1%;
+}
+
+.form-label {
+    font-size: 1.1em;
+    display: block;
+    padding-bottom: 0.5%;
+}
+
+.form-control {
+    width: 100%;
+    font-size: 1.05em;
+    padding: 0.6% 0.5%;
+}
+
+.form-control-textarea {
+    font-size: 1.4em;
+    width: 100%;
+    padding: 0.7%;
+}
+
+.btn-save {
+    background-color: #FFD639;
+    color: #000000;
+    padding: 1% 4%;
+    text-align: center;
+    display: block;
+    font-size: 1em;
+    border: none;
+    float: right;
+}
+
+.btn-save:hover {
+    background-color: #b2a200;
+}
+
 .footer {
     background-color: #333333;
     padding: 1% 0;
     color: #FFFFFF;
     text-align: center;
     width: 100%;
+    flex-shrink: 0;
 }
