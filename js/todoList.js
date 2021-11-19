@@ -1,20 +1,37 @@
 class TodoList {
+    static lastTodoList;
+
     constructor() {
-        this.todoList = document.getElementsByClassName("todo-item-list")[0]
-        this.startListenTasks()
+        if (TodoList.lastTodoList === undefined) {
+            this.todoList = document.getElementsByClassName("todo-item-list")[0]
+            TodoList.lastTodoList = this
+            this.startListenTasks()
+        }
+        TodoList.lastTodoList.printListFromStorage()
     }
 
     startListenTasks() {
-        let form = document.getElementById("todo-list-form")
-        form.onsubmit = function (){
+        function listen() {
             let input = document.getElementById("todo-list-input")
-            alert(input.value)
+            localStorage.setItem(localStorage.length.toString(), input.value)
+            TodoList.lastTodoList.printListFromStorage()
+            return false
         }
+
+        let form = document.getElementById("todo-list-form")
+        form.onsubmit = listen
     }
 
     printListFromStorage() {
+        this.todoList.innerHTML = ""
+        let keys = []
         for (let i = 0; i < localStorage.length; i++) {
             let key = localStorage.key(i)
+            keys.push(key)
+        }
+        keys.sort()
+        for (let i = 0; i < localStorage.length; i++) {
+            let key = keys[i]
             let taskContent = localStorage.getItem(key)
             let task = this.createItemHtml(taskContent)
             this.todoList.appendChild(task)
@@ -32,12 +49,6 @@ class TodoList {
         li.appendChild(deleteButton)
         return li
     }
-
-    saveInStorage(con) {
-
-    }
 }
 
-localStorage.setItem("1", "TEST")
 todoList = new TodoList()
-todoList.printListFromStorage()
