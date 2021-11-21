@@ -96,7 +96,7 @@
 }
 
 .delete-item-button-not-displayed {
-    display: none;
+    visibility: hidden;
 }
 
 .delete-item-button:hover {
