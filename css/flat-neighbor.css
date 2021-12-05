@@ -1,6 +1,7 @@
 .flat-neighbors-list {
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .flat-neighbors-list__elem{

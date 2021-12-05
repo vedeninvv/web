@@ -6,6 +6,7 @@
     <link href="../css/style.css" rel="stylesheet">
     <script src="../js/pageLoadTime.js"></script>
     <title>Соседи</title>
+    <script src="../js/loadStudents.js"></script>
 </head>
 <body>
 <header class="header">
@@ -26,59 +27,25 @@
 
 <main>
     <div class="flat-neighbors-list">
-        <div class="flat-neighbors-list__elem">
-            <img src="../media/neighbor-pic-example.png">
-            <div class="characteristic-list">
-                <div class="characteristic-list-line">
-                    <span class="characteristic-list-line__title">Имя:</span>
-                    <span class="characteristic-list-line__value">Башмачкин Акакий Акакиевич</span>
-                </div>
-                <div class="characteristic-list-line">
-                    <span class="characteristic-list-line__title">Макс. жильцов:</span>
-                    <span class="characteristic-list-line__value">3</span>
-                </div>
-                <div class="characteristic-list-line">
-                    <span class="characteristic-list-line__title">Примечание:</span>
-                    <span class="characteristic-list-line__value">Очень люблю шинели</span>
-                </div>
-            </div>
-        </div>
-        <div class="flat-neighbors-list__elem">
-            <img src="../media/neighbor-pic-example.png">
-            <div class="characteristic-list">
-                <div class="characteristic-list-line">
-                    <span class="characteristic-list-line__title">Имя:</span>
-                    <span class="characteristic-list-line__value">Башмачкин Акакий Акакиевич</span>
-                </div>
-                <div class="characteristic-list-line">
-                    <span class="characteristic-list-line__title">Макс. жильцов:</span>
-                    <span class="characteristic-list-line__value">3</span>
-                </div>
-                <div class="characteristic-list-line">
-                    <span class="characteristic-list-line__title">Примечание:</span>
-                    <span class="characteristic-list-line__value">Очень люблю шинели</span>
-                </div>
-            </div>
-        </div>
-        <div class="flat-neighbors-list__elem">
-            <img src="../media/neighbor-pic-example.png">
-            <div class="characteristic-list">
-                <div class="characteristic-list-line">
-                    <span class="characteristic-list-line__title">Имя:</span>
-                    <span class="characteristic-list-line__value">Башмачкин Акакий Акакиевич</span>
-                </div>
-                <div class="characteristic-list-line">
-                    <span class="characteristic-list-line__title">Макс. жильцов:</span>
-                    <span class="characteristic-list-line__value">3</span>
-                </div>
-                <div class="characteristic-list-line">
-                    <span class="characteristic-list-line__title">Примечание:</span>
-                    <span class="characteristic-list-line__value">Очень люблю шинели</span>
-                </div>
-            </div>
-        </div>
+
     </div>
 </main>
+
+<template id="neighbors-list-elem-template">
+    <div class="flat-neighbors-list__elem">
+        <img src="../media/neighbor-pic-example.png">
+        <div class="characteristic-list">
+
+        </div>
+    </div>
+</template>
+
+<template id="characteristic-list-line-template">
+    <div class="characteristic-list-line">
+        <span class="characteristic-list-line__title"></span>
+        <span class="characteristic-list-line__value"></span>
+    </div>
+</template>
 
 <footer class="footer">
     ©2021 Веденин Вадим, М33031. Created specifically for the ITMO course web programming
