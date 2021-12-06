@@ -3,12 +3,8 @@ window.onload = loadStudents;
 function loadStudents() {
     let start = getRandomInt(1, 5);
     let end = getRandomInt(start + 1, 8);
-    let neighborList = document.getElementsByClassName("flat-neighbors-list")[0];
-    let waitingGif = document.createElement("img");
-    waitingGif.id = "waiting-gif";
-    waitingGif.src = "../media/waiting_gif.gif";
-    waitingGif.width = 200;
-    neighborList.appendChild(waitingGif);
+
+    appendWaitingGif()
 
     let response = fetch('https://jsonplaceholder.typicode.com/users/');
     response.then((response) => {
@@ -18,8 +14,8 @@ function loadStudents() {
             throw new Error("Error");
         }
     }).then((users) => {
+        removeWaitingGif()
         let neighborList = document.getElementsByClassName("flat-neighbors-list")[0];
-        neighborList.removeChild(neighborList.getElementsByTagName("img")[0]);
 
         for (let id = start; id < end; id++) {
             let neighbor = createNeighborHtml(users[id]);
@@ -60,8 +56,22 @@ function getRandomInt(min, max) {
 }
 
 function printError() {
+    removeWaitingGif()
     let neighborList = document.getElementsByClassName("flat-neighbors-list")[0];
-    neighborList.removeChild(neighborList.getElementsByTagName("img")[0]);
     let errorText = document.createTextNode("Что-то пошло не так:(");
     neighborList.appendChild(errorText);
+}
+
+function appendWaitingGif() {
+    let neighborList = document.getElementsByClassName("flat-neighbors-list")[0];
+    let waitingGif = document.createElement("img");
+    waitingGif.id = "waiting-gif";
+    waitingGif.src = "../media/waiting_gif.gif";
+    waitingGif.width = 200;
+    neighborList.appendChild(waitingGif);
+}
+
+function removeWaitingGif() {
+    let neighborList = document.getElementsByClassName("flat-neighbors-list")[0];
+    neighborList.removeChild(neighborList.getElementsByTagName("img")[0]);
 }
