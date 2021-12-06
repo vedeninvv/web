@@ -1,6 +1,6 @@
 window.onload = loadStudents;
 
-function loadStudents(){
+async function loadStudents() {
     let start = getRandomInt(1, 5);
     let end = getRandomInt(start + 1, 8);
     let neighborList = document.getElementsByClassName("flat-neighbors-list")[0];
@@ -10,22 +10,18 @@ function loadStudents(){
     waitingGif.width = 200;
     neighborList.appendChild(waitingGif);
 
-    let users = new Promise(async (resolve, reject) => {
-        let response = await fetch('https://jsonplaceholder.typicode.com/users/')
-            .catch((error) => {
-            printError()
-        });
+    let response = fetch('https://jsonplaceholder.typicode.com/users/');
+    response.then(async (response) => {
         if (response.ok) {
-            let users = await response.json();
-            resolve(users);
+            return await response.json()
         } else {
-            reject(new Error("Error"));
+            throw new Error("Error");
         }
     }).then((users) => {
         let neighborList = document.getElementsByClassName("flat-neighbors-list")[0];
         neighborList.removeChild(neighborList.getElementsByTagName("img")[0]);
 
-        for (let id = start; id < end; id++){
+        for (let id = start; id < end; id++) {
             let neighbor = createNeighborHtml(users[id]);
             neighborList.appendChild(neighbor);
         }
@@ -34,7 +30,7 @@ function loadStudents(){
     });
 }
 
-function createNeighborHtml(neighbor){
+function createNeighborHtml(neighbor) {
     let neighborTemp = document.getElementById("neighbors-list-elem-template");
     let neighborHtml = neighborTemp.content.cloneNode(true);
     let characteristicList = neighborHtml.querySelectorAll(".characteristic-list")[0];
@@ -47,7 +43,7 @@ function createNeighborHtml(neighbor){
     return neighborHtml;
 }
 
-function appendCharacteristicListLine(characteristicList, title, value){
+function appendCharacteristicListLine(characteristicList, title, value) {
     let listLineTemp = document.getElementById("characteristic-list-line-template");
 
     let listLine = listLineTemp.content.cloneNode(true);
@@ -63,7 +59,7 @@ function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min)) + min;
 }
 
-function printError(){
+function printError() {
     let neighborList = document.getElementsByClassName("flat-neighbors-list")[0];
     neighborList.removeChild(neighborList.getElementsByTagName("img")[0]);
     let errorText = document.createTextNode("Что-то пошло не так:(");
