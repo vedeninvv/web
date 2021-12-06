@@ -1,6 +1,6 @@
 window.onload = loadStudents;
 
-async function loadStudents() {
+function loadStudents() {
     let start = getRandomInt(1, 5);
     let end = getRandomInt(start + 1, 8);
     let neighborList = document.getElementsByClassName("flat-neighbors-list")[0];
@@ -11,9 +11,9 @@ async function loadStudents() {
     neighborList.appendChild(waitingGif);
 
     let response = fetch('https://jsonplaceholder.typicode.com/users/');
-    response.then(async (response) => {
+    response.then((response) => {
         if (response.ok) {
-            return await response.json()
+            return response.json()
         } else {
             throw new Error("Error");
         }
